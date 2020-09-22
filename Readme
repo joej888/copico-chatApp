@@ -1,0 +1,55 @@
+Welcome to my socket.io project.
+
+Technologies:
+Frontend: HTML, CSS, JAVASCRIPT.
+Backend: NODE.JS, EXPRESS, SOCKET.IO, JWT, SEQUELIZE
+Database: POSTGRES
+Other Packages: SEQUELIZE-CLI, MOMENT, EXPRESS VALIDATOR, PG, PG-HSTORE
+
+How to begin ?
+
+1. Databse migrations are done using Sequelize-CLI package.
+   So Please install it create database using command [sequelize db:create].
+   Migrate models and associations using command [sequelize db:migrate].
+   Seed initial data using command [sequelize db:seed:all]
+   Now you have must have setup a database called copicochatapp_pg in database.
+
+2. Using the command [npm install]  to install the packages 
+    and then command [npm start] in the CLI you can start the application.
+
+3. Navigate to http://localhost:5000/index.html or type localhost:5000 
+   in your browser to start the application.
+   
+4. Any one of the user credentials can be used for logining into the application.
+    
+    email:deny@gmail.com,       password:deny
+    email:admin@gmail.com,      password:admin
+    email:user@gmail.com,       password:user
+    email:emmy@gmail.com,       password:emmy
+    email:pattison@gmail.com,   password:pattison
+    email:hr@focaloid.com,      password:focaloid
+
+5. Now can use the application.
+
+End User Funclionality ->
+1. Login user valid credentials.
+2. Chat using chatbox provided.
+3. Logout when completed chatting.
+
+Project Flow
+1. The app using node.js exposes socket which can be accessed at localhost port :5000
+2. By hitting the port you can access the frontent html which helps with loging functionality.
+3. The user credentials are verified before allowing to login.
+4. Once verified the user is provided with proper jwt token and direcetd to chat page.
+5. The user chat screen is populated with chat history so as to view previous chats which are fetched
+    from database with api.
+6. User name is displayed at left top end.
+7. Number of users in chat room is displayed at left.
+8. All other users are notified of new user joined via sockets
+9. User can send messages, which are verified for token and saved to database.
+10. User can leave chat room using logout button on top right.
+11. When the user leaves a message is send to notify that the user has left.
+
+
+
+Thankyou for using the application.

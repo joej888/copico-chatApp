@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Copico Chat</title>
+  </head>
+  <body>
+    <div class="join-container">
+      <header class="join-header">
+        <h1><i class="far fa-comments"></i> ChatApp</h1>
+      </header>
+      <main class="join-main">
+        <label for="invalid" id="invalid" type="hidden" class="join-invalid"></label>
+        <form action="" id="login-form">
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              autocomplete="on"
+              placeholder="Enter valid email..."
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input
+              type="text"
+              name="password"
+              id="password"
+              placeholder="Enter Password..."
+              autocomplete="off"
+              required
+            />
+          </div>
+          <button id="login" type="submit" class="btn">Login</button>
+        </form>
+      </main>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+  <script src="js/login.js"></script>
+  </body>
+</html>
