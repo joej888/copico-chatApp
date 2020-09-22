@@ -9,13 +9,15 @@ Other Packages: SEQUELIZE-CLI, MOMENT, EXPRESS VALIDATOR, PG, PG-HSTORE
 How to begin ?
 
 1. Databse migrations are done using Sequelize-CLI package.
-   So Please install it create database using command [sequelize db:create].
+   Use the command [npm install] to install the packages and then
+   install it create database using command [sequelize db:create].
    Migrate models and associations using command [sequelize db:migrate].
+   If its says migrated already then use [sequelize db:migrate:undo:all]
+   and do above steps to create database.
    Seed initial data using command [sequelize db:seed:all]
    Now you have must have setup a database called copicochatapp_pg in database.
 
-2. Using the command [npm install]  to install the packages 
-    and then command [npm start] in the CLI you can start the application.
+2. Using the command [npm start] in the CLI you can start the application.
 
 3. Navigate to http://localhost:5000/index.html or type localhost:5000 
    in your browser to start the application.
