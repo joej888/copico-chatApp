@@ -17,10 +17,13 @@ function formatMessage(username, text) {
 ////****** Functions for handeling old history messages saved in database *****//
 ////****** ----------------------------*************//
 function formatHistoryMessage(element) {
-  elementArray = Object.values(element)
+  /*elementArray = Object.values(element)
   var username = elementArray[0]["user.name"]
   var text = elementArray[0]["chatContent"]
-  var time = elementArray[0]["createdAt"]
+  var time = elementArray[0]["createdAt"]*/
+  var username = element['user.name'];
+  var text = element.chatContent
+  var time = element.createdAt
   return {
     username,
     text,

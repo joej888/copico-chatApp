@@ -43,9 +43,13 @@ socket.on("historyFetch", () => {
     return response.json();
   }).then(data => {
     (data.chats).forEach(element => {
+      socket.emit("oldMessage", element);
+    });
+  })/*.then(data => {
+    (data.chats).forEach(element => {
       socket.emit("oldMessage", { element });
     });
-  }).catch(err => {
+  })*/.catch(err => {
     console.log(err);
   });
 });
